@@ -8,7 +8,7 @@ This is a very simple project for getting started with the [WebAssembly NPM Modu
 
 
 ```sh
-$ git clone git@github.com:Ideea-inc/S4.git
+$ git clone git@github.com:anthonybudd/WebAssemblyHelloWorld.git
 
 $ ./node_modules/.bin/wa compile -o HelloWorld.wasm HelloWorld.c
 
