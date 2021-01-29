@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>WebAssembly Hello World</title>
+</head>
+
+<body>
+    <div id="text"></div>
+
+    <script type="text/javascript">
+        fetch("HelloWorld.wasm")
+            .then(bytes => bytes.arrayBuffer())
+            .then(mod => WebAssembly.compile(mod))
+            .then(module => (new WebAssembly.Instance(module)))
+            .then(instance => {
+                let buffer = new Uint8Array(instance.exports.memory.buffer);
+                let text = "";
+
+                for (let i = instance.exports.c_hello(); buffer[i]; i++) {
+                    text += String.fromCharCode(buffer[i]);
+                }
+
+                console.log(text);
+                document.getElementById("text").innerHTML = text;
+            });
+    </script>
+</body>
+
+</html>
