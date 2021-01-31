@@ -4,7 +4,7 @@
 
 # WebAssembly Hello World
 
-This is a very simple project for getting started with the [WebAssembly NPM Module](https://www.npmjs.com/package/webassembly). This repo is just some personal notes from my experiments with WebAssembly. This is not an open-source project.
+This is a very simple project for getting started with the [WebAssembly NPM Module](https://www.npmjs.com/package/webassembly). This repo is just some personal notes from my experiments with WebAssembly.
 
 
 ```sh
@@ -14,5 +14,5 @@ $ ./node_modules/.bin/wa compile -o HelloWorld.wasm HelloWorld.c
 
 $ node serve.js
 
-$ open http://localhost:8888
+$ open http://localhost:8000
 ```
